@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página web</title>
+    <link rel="shortcut icon" href="./public/img/pageIcon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <header>
+        <h1>¡Bienvenidos a mi espacio!</h1>
+    </header>
+    <main>
+        <section id="about">
+            <h2>Sobre mí</h2>
+            <p>Mi nombre es Marcelo, tengo 26 años y soy de Argentina. Empecé a estudiar desarrollo web hace 1 año de manera autodidacta, y ahora decidí ingresar a Henry para afianzar los conocimientos que adquirí hasta el momento aplicándole una mayor intensidad, con el objetivo de tener lo necesario para conseguir un trabajo en el sector de la industria tecnológica.</p>
+        </section>
+        <section id="technologies">
+            <h2>Mis Tecnologías Favoritas</h2>
+            <article class="technologies-container">
+                <a class="technology" href="https://tailwindcss.com/" target="_blank">
+                    <img src="./public/img/tailwindcss.svg" alt="Logo de Tailwind">
+                    <p>Tailwind</p>
+                </a>
+                <a class="technology" href="https://es.react.dev/" target="_blank">
+                    <img src="./public/img/react.svg" alt="Logo de React">
+                    <p>React</p>
+                </a>
+                <a class="technology" href="https://astro.build/" target="_blank">
+                    <img src="./public/img/astro.svg" alt="Logo de Astro">
+                    <p>Astro</p>
+                </a>
+            </article>
+        </section>
+        <section id="hobbies">
+            <h2>Mis Actividades Favoritas</h2>
+            <div class="create-hobbies">
+                <form action="/">
+                    <input type="text" name="title" id="activity-title" placeholder="Título" required>
+                    <textarea name="description" id="activity-description" cols="30" rows="5" placeholder="Descripción" required></textarea>
+                    <input type="url" name="url-image" id="activity-image" placeholder="URL de la imagen" required>
+                    <button type="submit" id="button">Agregar Actividad</button>
+                </form>
+                <div class="box-collection">
+                    <p>Aún no hay actividades para mostrar</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Creado por Marcelo Lencina para el M1 de <a href="https://www.soyhenry.com/">Henry</a></p>
+    </footer>
+    <script src="./scripts/index.js"></script>
+</body>
+</html>

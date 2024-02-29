@@ -1,9 +1,9 @@
-// const inputTitle = document.getElementById('activity-title')
-// const inputDescription = document.getElementById('activity-description')
-// const inputImage = document.getElementById('activity-image')
-// const buttonAddActivity = document.getElementById('button')
+const inputTitle = document.getElementById('activity-title')
+const inputDescription = document.getElementById('activity-description')
+const inputImage = document.getElementById('activity-image')
+const buttonAddActivity = document.getElementById('button')
 
-// const boxActivities = document.querySelector('.box-collection')
+const boxActivities = document.querySelector('.box-collection')
 
 class Activity {
     constructor({id, title, description, urlImage}) {
@@ -40,32 +40,32 @@ const repositoryActivities = new Repository()
 
 
 
-// buttonAddActivity.addEventListener('click', (event) => {
-//     event.preventDefault()
+buttonAddActivity.addEventListener('click', (event) => {
+    event.preventDefault()
     
-//     const objActivity = {
-//         title: inputTitle.value,
-//         description: inputDescription.value,
-//         urlImage: inputImage.value
-//     }
+    const objActivity = {
+        title: inputTitle.value,
+        description: inputDescription.value,
+        urlImage: inputImage.value
+    }
 
-//     let isCompleted = objActivity.title && objActivity.description && objActivity.urlImage
+    let isCompleted = objActivity.title && objActivity.description && objActivity.urlImage
 
-//     if( isCompleted ) {
-//         repositoryActivities.createActivity(objActivity)
-//     } else (
-//         alert('Completa todos los campos correctamente por favor.')
-//     )
+    if( isCompleted ) {
+        repositoryActivities.createActivity(objActivity)
+    } else (
+        alert('Completa todos los campos correctamente por favor.')
+    )
 
-//     if(repositoryActivities.activities.length > 0) {
-//         boxActivities.innerHTML = ''
-//         showAllActivities()
-//     }
+    if(repositoryActivities.activities.length > 0) {
+        boxActivities.innerHTML = ''
+        showAllActivities()
+    }
 
-//     inputTitle.value = ''
-//     inputDescription.value = ''
-//     inputImage.value = ''
-// })
+    inputTitle.value = ''
+    inputDescription.value = ''
+    inputImage.value = ''
+})
 
 function showAllActivities() {
     let allActivities = repositoryActivities.getAllActivities()
